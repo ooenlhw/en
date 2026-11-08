@@ -2,13 +2,13 @@
 
 Personal website for Eaindra Naing, a Flutter developer. It brings together a current résumé, an introduction to her working approach, contact details, and interactive previews of university projects.
 
-**Live site:** [ooenlhw.github.io/en_resume](https://ooenlhw.github.io/en_resume/)
+**Live site:** [ooenlhw.github.io/en](https://ooenlhw.github.io/en/)
 
 ## Pages
 
-- [Home](https://ooenlhw.github.io/en_resume/) — introduction and links to the résumé and portfolio.
-- [2026 résumé](https://ooenlhw.github.io/en_resume/en-2026-flutter.html) — Flutter experience and skills.
-- [Portfolio](https://ooenlhw.github.io/en_resume/portfolio/portfolio.html) — approach, background, projects, and contact details.
+- [Home](https://ooenlhw.github.io/en/) — introduction and links to the résumé and portfolio.
+- [2026 résumé](https://ooenlhw.github.io/en/en-2026-flutter.html) — Flutter experience and skills.
+- [Portfolio](https://ooenlhw.github.io/en/portfolio/portfolio.html) — approach, background, projects, and contact details.
 
 The portfolio links to six separately hosted **static project demos**. They use sample data and browser-side interactions to preview the projects; they do not run the original applications' backends.
 
