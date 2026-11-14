@@ -1,169 +1,102 @@
 :root {
-    --ff-primary: 'Jost', sans-serif;
-    --clr-light: #fff;
-    --clr-dark: #000;
-    --clr-accent: #007BFF;
-    --clr-wave: #ffee00f8;
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
-
-    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
-        0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+    --ink: #102b3a;
+    --muted: #506a77;
+    --ocean: #167f97;
+    --pale-ocean: #e3f2f5;
+    --line: #c9e0e6;
 }
 
+* { box-sizing: border-box; }
 
 body {
-    margin: 40px auto;
-    padding: 20px;
+    max-width: 794px;
+    margin: 24px auto;
+    padding: 0 28px 28px;
     background: #fff;
+    color: var(--ink);
+    font: 13px/1.4 Arial, Helvetica, sans-serif;
 }
+
+a { color: var(--ocean); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.resume-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+.resume-actions button, .resume-actions a { border: 1px solid var(--ocean); border-radius: 6px; padding: 8px 13px; background: #fff; color: var(--ocean); font: 600 13px Arial, Helvetica, sans-serif; cursor: pointer; }
+.resume-actions a:first-child { background: var(--ocean); color: #fff; }
+.resume-actions button:hover, .resume-actions a:hover { background: var(--ink); border-color: var(--ink); color: #fff; text-decoration: none; }
 
 .profile-header {
-    line-height: 1.6;
     display: flex;
     align-items: center;
-    gap: 60px;
-    padding-left: 0px;
+    gap: 18px;
+    min-height: 108px;
+    padding: 12px 16px;
+    border-left: 4px solid var(--ocean);
+    background: var(--pale-ocean);
 }
+
+.profile-info { flex: 1; min-width: 0; }
+.profile-info h1 { margin: 0; font-size: 1.85rem; line-height: 1.1; font-weight: 500; }
+.profile-role { margin: 3px 0 5px; color: var(--muted); font-size: .95rem; }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    order: 2;
+    width: 76px;
+    height: 76px;
+    flex: 0 0 76px;
     border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
 }
 
-.profile-info {
-    flex: 1;
+.profile-links { margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: .88rem; }
+.profile-links li { margin-top: 2px; }
+.profile-links i { display: inline-block; width: 18px; margin-right: 4px; color: var(--ocean); }
+.print-icon-library { position: absolute; width: 0; height: 0; overflow: hidden; }
+.print-icon { display: none; }
+.profile-links .contact-numbers { display: flex; flex-wrap: wrap; column-gap: 18px; }
+.contact-numbers span { white-space: nowrap; }
+.social-links a { margin-right: 12px; white-space: nowrap; }
+
+.section { margin-top: 13px; }
+.section h4, .section.language h3 {
+    margin: 0 0 5px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--line);
+    color: var(--ocean);
+    font-size: .94rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
 }
 
-.profile-info h1 {
-    font-family: Figtree;
-    font-size: 1.8em;
-    margin: 0;
-    /* text-align: center; */
+.section h3 { margin: 9px 0 1px; font-size: .98rem; font-weight: 600; }
+.section p { margin: 0; }
+.section .content { line-height: 1.4; }
+.section ul.content { margin: 3px 0 0; padding-left: 17px; }
+.section ul.content li { padding-left: 1px; margin: 2px 0; }
+.experience p, .education p { color: var(--muted); font-size: .9rem; }
+.experience .right, .education .right { float: right; margin-left: 12px; }
+.experience h3, .education h3 { break-after: avoid-page; }
+.experience p { break-after: avoid-page; }
+
+@media (max-width: 600px) {
+    body { margin: 0 auto; padding: 0 18px 24px; }
+    .profile-header { gap: 14px; padding: 16px; }
+    .profile-info h1 { font-size: 1.6rem; }
+    .profile-pic { width: 72px; height: 72px; flex-basis: 72px; align-self: flex-start; }
+    .experience .right, .education .right { float: none; display: block; margin-left: 0; }
 }
 
-.profile-info h2 {
-    margin: 5px 0;
-    font-size: 1.2em;
-}
-
-.profile-info p {
-    margin-top: 10px;
-}
-
-ul.profile-links {
-    /* padding-top: 20px;
-    padding-inline-start: 0;
-    margin-left: -10px;
-    display: flex;
-    flex-direction: row; */
-    font-family: Albert Sans;
-    padding: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-ul.profile-links li {
-    list-style-type: none;
-    /* margin-left: 10px; */
-
-    a {
-        text-decoration: none !important;
-        color: var(--clr-dark);
-    }
-
-    i {
-        color: var(--clr-dark);
-    }
-}
-
-.social-links a {
-    margin-right: 10px;
-    white-space: nowrap;
-}
-
-ul.profile-links-two {
-    font-family: Albert Sans;
-    padding-top: 0px;
-    padding-inline-start: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-left: -10px;
-    display: flex;
-    flex-direction: row;
-}
-
-ul.profile-links-two li {
-    list-style-type: none;
-    margin-left: 10px;
-
-    a {
-        text-decoration: none !important;
-        color: var(--clr-dark);
-    }
-
-    i {
-        color: var(--clr-dark);
-    }
-}
-
-.content {
-    font-family: Merriweather;
-    font-size: small;
-    line-height: 1.5;
-}
-
-ul.content {
-    font-family: Merriweather;
-    font-size: small;
-    padding-inline-start: 20px;
-}
-
-h3 {
-    font-family: Albert Sans;
-    margin: 10px 0;
-}
-
-h4 {
-    font-family: Albert Sans;
-    margin: 0;
-}
-
-.summary {
-    margin-top: 20px;
-}
-
-.skills {}
-
-.experience {
-    p {
-        font-family: Lexend Deca;
-        font-weight: 200;
-        font-size: 14px;
-        margin: 0;
-
-        .right {
-            float: right;
-        }
-    }
-}
-
-.education {
-    p {
-        font-family: Lexend Deca;
-        font-weight: 200;
-        font-size: 14px;
-
-        .right {
-            float: right;
-        }
-    }
-}
-
-.section {
-    border-bottom: 1px solid #d8d6d6;
-    margin-bottom: 15px;
+@media print {
+    @page { size: A4; margin: 13mm 15mm; }
+    .resume-actions { display: none; }
+    .profile-links i { display: none; }
+    .print-icon { display: inline-block; width: 12px; height: 12px; margin-right: 8px; vertical-align: -1px; fill: none; stroke: var(--ocean); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    body { max-width: none; margin: 0; padding: 0; font-size: 8.5pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { color: var(--ocean); }
+    .profile-header { min-height: 0; padding: 9px 12px; }
+    .profile-pic { width: 64px; height: 64px; flex-basis: 64px; }
+    .section { margin-top: 9px; }
+    .section h3 { margin-top: 6px; }
 }
